@@ -39,9 +39,6 @@ def train(model, device, train_loader, optimizer, criterion, epoch, log_interval
         
         # Push data/label to correct device
         data, target = data.to(device), target.to(device)
-        print(data.shape)
-        print(target)
-        exit()
         
         # Reset optimizer gradients. Avoids grad accumulation (accumulation used in RNN).
         optimizer.zero_grad()
